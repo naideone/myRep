@@ -1,4 +1,4 @@
-import random
+from random import randint
 def validate_input(choice):
     try:
         choice = int(choice)
@@ -9,7 +9,7 @@ def validate_input(choice):
         print("Введено не число или неправильное колличество камней")
 
 def computer_turn(stones):
-    computer_choice = random.randint(1, min(3, stones))
+    computer_choice = randint(1, min(3, stones))
     if computer_choice == 1:
         print("Компьютер берет", computer_choice, "камень.")
     else:
@@ -25,7 +25,7 @@ def user_turn(stones):
             return stones - user_choice
 
 def play_game():
-    stones = random.randint(4, 30)
+    stones = randint(4, 30)
     print("Колличество камней в куче:", stones)
     while stones > 1:
         stones = user_turn(stones)
