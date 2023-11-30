@@ -41,3 +41,5 @@ def play_game():
         if stones == 1:
             print("Компьютер выйграл!")
             return 0
+
+play_game()
